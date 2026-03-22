@@ -17,6 +17,10 @@ public class Tester
 
         System.out.println(coasterLine.peek());
          */
+        System.out.println("Print Queue: ");
         coasterLine.print();
+        System.out.println("Find objects: ");
+        System.out.println(coasterLine.find(new Person("John1", 0)));
+        System.out.println(coasterLine.find(new Person("John1", 1)));
     }
 }

@@ -24,4 +24,23 @@ public class Person implements Valuable
         return priorityLevel;
     }
 
+    public boolean equals(Object compareObj)
+    {
+        if (compareObj instanceof Person)
+        {
+            Person temp = (Person) compareObj;
+            if (temp.getName().equals(name) && temp.getPriority() == priorityLevel)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

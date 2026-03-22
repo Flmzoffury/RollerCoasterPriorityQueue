@@ -63,4 +63,23 @@ public class SamPriorityLine<T extends Valuable>
             this.add(temp.poll());
         }
     }
+
+    public boolean find(T data)
+    {
+        boolean found = false;
+        SamPriorityLine<T> temp = new SamPriorityLine(lines.length);
+        while (this.peek() != null)
+        {
+            if (this.peek().equals(data))
+            {
+                found = true;
+            }
+            temp.add(this.poll());
+        }
+        while (temp.peek() != null)
+        {
+            this.add(temp.poll());
+        }
+        return found;
+    }
 }
